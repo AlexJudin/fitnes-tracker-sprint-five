@@ -145,7 +145,7 @@ func (w Walking) Calories() float64 {
 	// вставьте ваш код ниже
 	meanSpeed := math.Pow(w.meanSpeed(), 2) / KmHInMsec
 
-	calories := ((CaloriesWeightMultiplier*w.Weight + (meanSpeed/w.Height)*CaloriesSpeedHeightMultiplier*w.Weight) * w.Duration.Hours() * MinInHours)
+	calories := (CaloriesWeightMultiplier*w.Weight + (meanSpeed/w.Height)*CaloriesSpeedHeightMultiplier*w.Weight) * w.Duration.Hours() * MinInHours
 
 	return calories
 }
@@ -198,7 +198,6 @@ func (s Swimming) Calories() float64 {
 // TrainingInfo returns info about swimming training.
 // Это переопределенный метод TrainingInfo() из Training.
 func (s Swimming) TrainingInfo() InfoMessage {
-	// вставьте ваш код ниже
 	// вставьте ваш код ниже
 	trainingInfo := InfoMessage{
 		TrainingType: s.TrainingType,
